@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatTableModule } from '@angular/material/table';
 
 import { AutoresRoutingModule } from './autores-routing.module';
 import { AutoresComponent } from './autores/autores.component';
@@ -11,7 +12,8 @@ import { AutoresComponent } from './autores/autores.component';
   ],
   imports: [
     CommonModule,
-    AutoresRoutingModule
+    AutoresRoutingModule,
+    MatTableModule
   ]
 })
 export class AutoresModule { }
