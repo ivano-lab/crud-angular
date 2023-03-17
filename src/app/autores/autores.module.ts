@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
 import { AutoresRoutingModule } from './autores-routing.module';
 import { AutoresComponent } from './autores/autores.component';
@@ -13,7 +13,7 @@ import { AutoresComponent } from './autores/autores.component';
   imports: [
     CommonModule,
     AutoresRoutingModule,
-    MatTableModule
+    AppMaterialModule
   ]
 })
 export class AutoresModule { }

@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+
 import { Autor } from '../model/autor';
+import { AutoresService } from './../services/autores.service';
 
 @Component({
   selector: 'app-autores',
@@ -8,13 +11,16 @@ import { Autor } from '../model/autor';
 })
 export class AutoresComponent {
 
-  autores: Autor[];
+  autores: Autor[] = [
+    { _id: '1', name: 'Edgar Allan Poe', magnumOpus: 'The Crow', literaryGenre: 'Gothic Literature'}
+  ];
   displayedColumns = ['name', 'magnumOpus', 'literaryGenre'];
 
-  constructor() {
-    this.autores = [
-      { _id: '1', name: 'Edgar Allan Poe', magnumOpus: 'The Crow', literaryGenre: 'Gothic Literature'}
-    ];
+  // autoresService: AutoresService;
+
+  constructor(private autoresService: AutoresService) {
+    // this.autoresService = new AutoresService();
+    this.autores = this.autoresService.list();
   }
 
 }
