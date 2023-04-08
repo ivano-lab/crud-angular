@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { tap, first, delay } from 'rxjs/operators';
 
 import { Autor } from '../model/autor';
 
@@ -7,11 +9,16 @@ import { Autor } from '../model/autor';
 })
 export class AutoresService {
 
-  constructor() { }
+  private readonly API = '/assets/autores.json';
 
-  list(): Autor[] {
-    return [
-      { _id: '1', name: 'Edgar Allan Poe', magnumOpus: 'The Crow', literaryGenre: 'Gothic Literature'}
-    ];
+  constructor(private httpClient: HttpClient) { }
+
+  list() {
+    return this.httpClient.get<Autor[]>(this.API)
+    .pipe(
+      first(),
+      delay(1000),
+      tap(autores => console.log(autores))
+    );
   }
 }

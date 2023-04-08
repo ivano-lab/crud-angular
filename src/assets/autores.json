@@ -1,0 +1,5 @@
+[
+  { "_id": "1", "name": "Edgar Allan Poe", "magnumOpus": "O Corvo", "literaryGenre": "Fantasia"},
+  { "_id": "2", "name": "Nathaniel Hawthorne", "magnumOpus": "A Letra Escarlate", "literaryGenre": "Ficção histórica"},
+  { "_id": "3", "name": "Marido de Aluguel", "magnumOpus": "Encanamentos", "literaryGenre": "indeterminado"}
+]

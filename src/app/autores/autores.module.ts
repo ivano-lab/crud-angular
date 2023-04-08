@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { SharedModule } from './../shared/shared.module';
 import { AutoresRoutingModule } from './autores-routing.module';
 import { AutoresComponent } from './autores/autores.component';
 
@@ -13,7 +14,8 @@ import { AutoresComponent } from './autores/autores.component';
   imports: [
     CommonModule,
     AutoresRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    SharedModule
   ]
 })
 export class AutoresModule { }
